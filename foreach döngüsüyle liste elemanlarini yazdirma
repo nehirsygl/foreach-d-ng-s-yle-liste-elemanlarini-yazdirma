@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp26
+{
+    /*
+     Foreach Döngüsü ile Liste Elemanlarını Yazdırma
+Bir ArrayList oluşturun ve içerisine birkaç tamsayı ekleyin. foreach döngüsü kullanarak listedeki her bir sayıyı ekrana yazdıran bir program yazınız.
+Döngü tamamlandığında sayıların toplamını da ekrana yazdırınız. */
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList sayilar = new ArrayList(); 
+            sayilar.Add(1);
+            sayilar.Add(2); 
+            sayilar.Add(3); 
+            
+            int toplam = 0;
+            foreach (int sayi in sayilar)
+            {
+                Console.WriteLine(sayi); toplam += sayi; 
+            }
+            Console.WriteLine("toplam: " + toplam);
+        }
+    }
+}
